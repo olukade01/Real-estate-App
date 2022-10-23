@@ -2,7 +2,7 @@ import { Flex, Box, Text, Button } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Banner = () => {
+const Banner = ({ text, title, imgUrl, desc, link, btnText }) => {
   return (
     <Flex>
       <Image src={imgUrl} alt="banner" width={500} height={300} />
@@ -10,9 +10,7 @@ const Banner = () => {
         <Text>{title}</Text>
         <Text>{text}</Text>
         <Text>{desc}</Text>
-        <Button>
-          <Link href={link}>{btnText}</Link>
-        </Button>
+        <Button>{/* <Link href={link}>{btnText}</Link> */}</Button>
       </Box>
     </Flex>
   );
