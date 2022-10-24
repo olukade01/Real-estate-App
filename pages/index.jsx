@@ -8,13 +8,17 @@ export default function Home({ propertyForRent, propertyForSale }) {
   return (
     <div className="">
       <Banner />
-      {propertyForRent.map((property) => (
-        <Property property={property} key={property.id} />
-      ))}
+      <Flex flexWrap="wrap">
+        {propertyForRent.map((property) => (
+          <Property property={property} key={property.id} />
+        ))}
+      </Flex>
       <Banner />
-      {propertyForSale.map((property) => (
-        <Property property={property} key={property.id} />
-      ))}
+      <Flex flexWrap="wrap">
+        {propertyForSale.map((property) => (
+          <Property property={property} key={property.id} />
+        ))}
+      </Flex>
     </div>
   );
 }
